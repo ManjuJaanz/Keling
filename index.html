@@ -34,11 +34,23 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
-    section img {
-      max-width: 100%;
-      height: auto;
+    .content-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .content-flex img {
+      width: 300px;
       border-radius: 6px;
-      margin-top: 15px;
+      flex-shrink: 0;
+    }
+
+    .content-flex p {
+      flex: 1;
+      text-align: justify;
+      line-height: 1.6;
     }
 
     footer {
@@ -48,9 +60,14 @@
       padding: 15px 0;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 24px;
+    @media (max-width: 768px) {
+      .content-flex {
+        flex-direction: column;
+      }
+
+      .content-flex img {
+        width: 100%;
+        max-width: 100%;
       }
     }
   </style>
@@ -66,26 +83,39 @@
 
     <section>
       <h2>Who We Are</h2>
-      <p>Keling is a growing provider of non-voice BPO services, focused on delivering efficient, scalable, and professional support through chat and data operations. We are committed to becoming an extension of your team and enhancing your business productivity.</p>
-      <img src="images/teamcollaboration.jpg" alt="Team Collaboration">
+      <div class="content-flex">
+        <p>
+          At Keling, we specialize in providing seamless non-voice BPO services that help businesses scale without compromising on quality. Our goal is to bridge the gap between businesses and their customers through prompt and professional chat support services. With a deep understanding of business process optimization, we are focused on enhancing customer experience while helping our partners reduce operational costs.
+        </p>
+        <img src="images/teamcollaboration.jpg" alt="Team Collaboration">
+      </div>
     </section>
 
     <section>
       <h2>Our Chat Support Services</h2>
-      <p>We offer real-time chat support for customer engagement, complaint resolution, and query handling. Our trained chat agents provide prompt and professional responses to ensure maximum customer satisfaction.</p>
-      <img src="images/customersupport.jpg" alt="Customer Support">
+      <div class="content-flex">
+        <p>
+          Our dedicated chat support team is trained to manage customer queries in real time, providing effective solutions and support. From answering FAQs to solving complex issues, we tailor our approach for each business. By maintaining a friendly tone and using best-in-class chat tools, we ensure your brand voice is consistent and customer satisfaction is our top priority.
+        </p>
+        <img src="images/customersupport.jpg" alt="Customer Support">
+      </div>
     </section>
 
     <section>
       <h2>Technology & Automation</h2>
-      <p>Using AI-powered tools and chatbots, we help businesses handle high volumes of customer interactions effectively, reducing operational costs while improving response times and service quality.</p>
-      <img src="images/chatbot.jpg" alt="Chatbot Automation">
+      <div class="content-flex">
+        <p>
+          We utilize smart automation tools and chatbot integrations to help businesses manage high volumes of customer interactions efficiently. These tools not only reduce manual effort but also improve response times significantly. Our automation solutions are tailored to suit business needs, ensuring that customers receive prompt, helpful responses 24/7 without human intervention.
+        </p>
+        <img src="images/chatbot.jpg" alt="Chatbot Automation">
+      </div>
     </section>
 
     <section>
       <h2>Contact Us</h2>
-      <p><strong>Phone:</strong> +91 70194 05901<br>
-         <strong>Email:</strong> <a href="mailto:kelingpvtltd@gmail.com">kelingpvtltd@gmail.com</a>
+      <p>
+        <strong>Phone:</strong> +91 70194 05901<br>
+        <strong>Email:</strong> <a href="mailto:kelingpvtltd@gmail.com">kelingpvtltd@gmail.com</a>
       </p>
     </section>
 
